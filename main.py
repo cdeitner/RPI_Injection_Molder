@@ -9,7 +9,7 @@ GPIO.setmode(GPIO.BOARD)
 tcpins = [7]
 
 # SCK Pin (default 37), MISO Pin (default 35)
-max6675.init_max6675(tc_pins)
+max6675.init_max6675(tcpins)
 
 while(1):  
   temp = max6675.read_temp(7)
