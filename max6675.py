@@ -2,12 +2,11 @@ import RPi.GPIO as GPIO
 import time
 
 # Initialize the control pins
-def init_max6675 (sck=37, miso=35, tc_pins):
+def init_max6675 (tc_pins, sck=37, miso=35):
   global SCK
   SCK = sck
   global MISO
   MISO = miso
-  GPIO.setmode(GPIO.BOARD)
   GPIO.setup(sck, GPIO.OUT, initial = GPIO.LOW)
   GPIO.setup(miso, GPIO.IN)
   for pin in tc_pins:
